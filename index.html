@@ -1,323 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amethyst XR | Immersive Experiences</title>
-<style>
-* {
-    box-sizing: border-box;
-}
-html {
-    scroll-behavior: smooth;
-}
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0b0d12;
-    color: #ffffff;
-}
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 22px 8%;
-    border-bottom: 1px solid #242833;
-    background: rgba(11, 13, 18, 0.96);
-}
-.brand-logo {
-    width: 220px;
-    max-height: 75px;
-    object-fit: contain;
-    object-position: left center;
-}
-nav a {
-    margin-left: 26px;
-    color: #d7d9df;
-    text-decoration: none;
-    font-size: 16px;
-}
-nav a:hover {
-    color: #b388ff;
-}
-.hero {
-    min-height: 68vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 90px 8%;
-    text-align: center;
-    background:
-        radial-gradient(circle at 20% 20%, rgba(124, 77, 255, 0.25), transparent 34%),
-        radial-gradient(circle at 80% 70%, rgba(70, 165, 255, 0.14), transparent 32%);
-}
-.hero-content {
-    max-width: 900px;
-}
-.hero h1 {
-    margin: 0 0 18px;
-    font-size: clamp(45px, 7vw, 78px);
-}
-.hero h2 {
-    margin: 0 auto 28px;
-    color: #b388ff;
-    font-weight: 400;
-    font-size: clamp(23px, 3vw, 35px);
-}
-.hero p {
-    max-width: 780px;
-    margin: auto;
-    color: #c7cad2;
-    font-size: 19px;
-    line-height: 1.8;
-}
-.section {
-    padding: 80px 8%;
-}
-.product {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 70px;
-    max-width: 1250px;
-    margin: auto;
-}
-.product-text {
-    max-width: 650px;
-}
-.product-text h2 {
-    margin: 0 0 12px;
-    font-size: clamp(42px, 6vw, 70px);
-}
-.product-text h3 {
-    margin: 0 0 26px;
-    color: #b388ff;
-    font-size: clamp(22px, 3vw, 32px);
-    font-weight: 400;
-}
-.product-text p {
-    color: #c7cad2;
-    font-size: 18px;
-    line-height: 1.8;
-}
-.virtuo-logo {
-    width: min(410px, 40vw);
-    max-height: 360px;
-    object-fit: contain;
-}
-.actions {
-    margin-top: 30px;
-}
-.button {
-    display: inline-block;
-    margin: 0 12px 12px 0;
-    padding: 14px 26px;
-    border-radius: 9px;
-    background: #7c4dff;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-.button:hover {
-    background: #9871ff;
-}
-.button.secondary {
-    background: transparent;
-    border: 1px solid #7256af;
-}
-.features-section {
-    padding: 80px 8%;
-    text-align: center;
-    background: #0e1118;
-}
-.features-section h2 {
-    margin: 0 0 18px;
-    font-size: 38px;
-}
-.features-intro {
-    max-width: 820px;
-    margin: auto;
-    color: #c7cad2;
-    font-size: 18px;
-    line-height: 1.8;
-}
-.features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-    max-width: 1200px;
-    margin: 45px auto 0;
-}
-.card {
-    padding: 32px 25px;
-    border: 1px solid #292e39;
-    border-radius: 14px;
-    background: #151922;
-}
-.card h3 {
-    margin-top: 0;
-    color: #b388ff;
-}
-.card p {
-    margin-bottom: 0;
-    color: #c7cad2;
-    line-height: 1.7;
-}
-.future {
-    padding: 80px 8%;
-    text-align: center;
-}
-.future h2 {
-    margin: 0 0 18px;
-    font-size: 38px;
-}
-.future p {
-    max-width: 780px;
-    margin: auto;
-    color: #c7cad2;
-    font-size: 18px;
-    line-height: 1.8;
-}
-footer {
-    padding: 32px 8%;
-    border-top: 1px solid #242833;
-    text-align: center;
-    color: #8e939e;
-}
-footer a {
-    margin: 0 10px;
-    color: #b388ff;
-    text-decoration: none;
-}
-@media (max-width: 800px) {
-    header {
-        flex-direction: column;
-        gap: 18px;
-    }
-    nav a {
-        margin: 0 10px;
-    }
-    .product {
-        flex-direction: column;
-        text-align: center;
-    }
-    .virtuo-logo {
-        width: 78%;
-    }
-    .features {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Amethyst VR creates immersive virtual and mixed reality experiences for creativity, performance, learning and wellbeing.">
+  <meta name="theme-color" content="#090b14">
+  <title>Amethyst VR | Immersive Experiences</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<header>
-    <img
-        class="brand-logo"
-        src="amethyst-logo.png"
-        alt="Amethyst XR logo"
-    >
-<nav>
-    <a href="#about">About</a>
-    <a href="#virtuo">Virtuo</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="support.html">Support</a>
-</nav>
-</header>
-<main>
-<section class="hero" id="about">
-    <div class="hero-content">
-    <h1>Amethyst XR</h1>
-    <h2>Immersive experiences for creativity, presence and growth.</h2>
-    <p>
-        Amethyst XR creates virtual and mixed reality experiences
-        that bring together technology, creativity, learning and
-        mindful presence.
-    </p>
-    <p>
-        Our projects are designed to help people explore new ways
-        of practising, learning, expressing themselves and connecting
-        with the present moment.
-    </p>
-</div>
-</section>
-<section class="section" id="virtuo">
-<div class="product">
-    <div class="product-text">
-        <h2>Virtuo</h2>
-        <h3>Where practice becomes performance.</h3>
-        <p>
-            Virtuo is an immersive performance-training experience
-            designed for musicians, singers and performers.
-        </p>
-        <p>
-            Prepare for concerts, auditions and exams inside realistic
-            virtual environments while using your real instrument
-            through mixed reality passthrough.
-        </p>
-        <p>
-            Interact naturally through hand tracking, practise in
-            different performance spaces and use guided mental
-            preparation experiences before stepping onto the virtual stage.
+  <div class="ambient ambient-left" aria-hidden="true"></div>
+  <div class="ambient ambient-right" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container navigation">
+      <a class="brand" href="#top" aria-label="Amethyst VR home">
+        <img src="amethyst-logo.png" alt="Amethyst VR logo">
+      </a>
+
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#vision">Vision</a>
+        <a href="#virtuo">Virtuo</a>
+        <a href="#future">Future</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-content reveal">
+        <p class="eyebrow">Immersive experiences with purpose</p>
+        <h1>Technology that brings people closer to what matters.</h1>
+        <p class="hero-copy">
+          Amethyst VR creates virtual and mixed reality experiences for creativity,
+          performance, learning, presence and personal growth.
         </p>
         <div class="actions">
-            <a class="button" href="privacy.html">Privacy Policy</a>
-            <a class="button secondary" href="support.html">Support</a>
+          <a class="button primary" href="#virtuo">Discover Virtuo</a>
+          <a class="button secondary" href="#vision">Our vision</a>
         </div>
+      </div>
+    </section>
+
+    <section id="vision" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-label">Our vision</p>
+          <h2>Immersion should enhance human experience, not replace it.</h2>
+          <p>
+            We explore how XR can support focused practice, meaningful learning,
+            creative expression and moments of calm connection.
+          </p>
+        </div>
+
+        <div class="card-grid three">
+          <article class="glass-card reveal">
+            <div class="icon">✦</div>
+            <h3>Creativity</h3>
+            <p>Spaces that encourage exploration, expression and deeper engagement with creative work.</p>
+          </article>
+
+          <article class="glass-card reveal">
+            <div class="icon">◉</div>
+            <h3>Presence</h3>
+            <p>Experiences designed around attention, calm and connection with the present moment.</p>
+          </article>
+
+          <article class="glass-card reveal">
+            <div class="icon">△</div>
+            <h3>Growth</h3>
+            <p>Practical immersive tools for learning, confidence, preparation and personal development.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="virtuo" class="section featured">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-label">Featured project</p>
+          <h2>Meet Virtuo.</h2>
+          <p>An immersive performance-training experience for musicians, singers and performers.</p>
+        </div>
+
+        <article class="product-panel reveal">
+          <div class="product-copy">
+            <img class="product-wordmark" src="virtuo-logo.png" alt="Virtuo logo">
+            <p class="product-tagline">Where practice becomes performance.</p>
+            <p>
+              Prepare for concerts, auditions and exams inside realistic virtual spaces.
+              Use your real instrument through mixed reality passthrough, interact naturally
+              with hand tracking and perform before virtual audiences and examination commissions.
+            </p>
+            <p>
+              Guided backstage experiences support focus, presence and mental preparation
+              before entering the virtual stage.
+            </p>
+            <div class="actions">
+              <a class="button primary" href="support.html">Virtuo support</a>
+              <a class="button secondary" href="privacy.html">Privacy policy</a>
+            </div>
+          </div>
+
+          <div class="product-orb" aria-hidden="true">
+            <img src="virtuo-logo.png" alt="">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-label">Virtuo features</p>
+          <h2>Designed around real performance.</h2>
+        </div>
+
+        <div class="card-grid two">
+          <article class="feature-card reveal">
+            <h3>Immersive venues</h3>
+            <p>Concert halls, examination rooms and intimate spaces with realistic audiences.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3>Mixed reality</h3>
+            <p>See and use your real instrument through passthrough while remaining inside the venue.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3>Natural interaction</h3>
+            <p>Use hand tracking to adjust and interact directly with the experience.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3>Mental preparation</h3>
+            <p>Guided experiences focused on calm, concentration, presence and flow.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="future" class="section">
+      <div class="container">
+        <div class="future-panel reveal">
+          <p class="section-label">Beyond Virtuo</p>
+          <h2>Virtuo is only the beginning.</h2>
+          <p>
+            Future Amethyst VR experiences will explore meditation, wellbeing,
+            creativity, learning and new forms of immersive interaction.
+          </p>
+          <div class="pills" aria-label="Future experience areas">
+            <span>Meditation</span>
+            <span>Wellbeing</span>
+            <span>Creativity</span>
+            <span>Learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 Amethyst VR</p>
+      <div>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+      </div>
     </div>
-    <img
-        class="virtuo-logo"
-        src="virtuo-logo.png"
-        alt="Virtuo logo"
-    >
-</div>
-</section>
-<section class="features-section">
-<h2>Designed for real performance</h2>
-<p class="features-intro">
-    Virtuo combines realistic environments, mixed reality and
-    mental preparation to create a focused training experience
-    for musicians and performers.
-</p>
-<div class="features">
-    <div class="card">
-        <h3>Immersive environments</h3>
-        <p>
-            Practise in concert halls, examination rooms and intimate
-            performance spaces with realistic audiences and commissions.
-        </p>
-    </div>
-    <div class="card">
-        <h3>Mixed reality</h3>
-        <p>
-            See and use your real instrument through passthrough
-            while remaining immersed in the virtual environment.
-        </p>
-    </div>
-    <div class="card">
-        <h3>Mental preparation</h3>
-        <p>
-            Guided backstage experiences support focus, presence
-            and confidence before each performance.
-        </p>
-    </div>
-</div>
-</section>
-<section class="future">
-<h2>More experiences are coming</h2>
-<p>
-    Virtuo is the first Amethyst XR project. Future experiences
-    will explore creativity, meditation, wellbeing, learning and
-    new forms of immersive interaction.
-</p>
-</section>
-</main>
-<footer>
-<p>© 2026 Amethyst XR</p>
-<p>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="support.html">Support</a>
-</p>
-</footer>
+  </footer>
 </body>
 </html>
